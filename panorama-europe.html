@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Панорама Європа</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+
+<link rel="stylesheet" href="css/panorama-europe.css">
+</head>
+
+<body>
+
+<header>
+<h1>🌍 Європа • Панорама 360°</h1>
+</header>
+
+<div class="container">
+
+    <div class="game-grid">
+
+        <div class="panel">
+            <h2>📷 Де це?</h2>
+            <div class="panorama-frame" id="panoramaFrame"></div>
+        </div>
+
+        <div class="panel">
+            <h2>🗺️ Постав мітку на карті</h2>
+            <div id="map"></div>
+            <div class="hint">Клікни по карті, щоб поставити мітку з країною своєї здогадки</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+        <button id="guessBtn" disabled>Перевірити здогадку</button>
+        <button id="nextBtn">Наступна панорама 🔄</button>
+    </div>
+
+    <div class="status" id="statusBox" style="display:none;"></div>
+
+    <a class="back" href="question-menu.html">⬅ Повернутися</a>
+
+</div>
+
+<script src="js/panorama-europe.js"></script>
+
+</body>
+</html>

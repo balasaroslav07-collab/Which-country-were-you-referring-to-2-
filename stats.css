@@ -1,0 +1,42 @@
+/* stats.css — стилі сторінок "Статистика" (Africa/Asia/NorthAmerica/
+   SouthAmerica/Oceania/World). Підключається разом з common.css. */
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    text-align:center;
+}
+
+.container img{
+    width:700px;
+    max-width:90vw;
+    border-radius:20px;
+    box-shadow:0 0 35px rgba(0,0,0,.45);
+}
+
+h1{
+    margin-bottom:20px;
+    font-size:42px;
+}
+
+p{
+    margin-top:25px;
+    font-size:24px;
+    color:#d9e8ff;
+}
+
+button{
+    margin-top:35px;
+}
+
+@media (max-width:600px){
+    .container img{
+        border-radius:14px;
+        box-shadow:0 0 18px rgba(0,0,0,.45);
+    }
+}

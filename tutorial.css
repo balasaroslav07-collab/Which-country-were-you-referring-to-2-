@@ -1,0 +1,94 @@
+/* tutorial.css — стилі сторінки туторіалу (360-tutorial.html) */
+
+.container{
+    width:1000px;
+    max-width:95%;
+    margin:60px auto;
+}
+
+h1{
+    text-align:center;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:22px;
+    color:#d6e7ff;
+    margin-bottom:45px;
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:25px;
+}
+
+.card h2{
+    color:#6fb3ff;
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:20px;
+    line-height:1.7;
+}
+
+.example{
+    margin-top:20px;
+    background:#132d4e;
+    border-radius:15px;
+    padding:20px;
+}
+
+.example p{
+    margin:8px 0;
+}
+
+.correct{ color:#69ff7c; }
+.wrong{ color:#ff7070; }
+.almost{ color:orange; }
+
+.back{
+    display:block;
+    width:320px;
+    max-width:85%;
+    margin:50px auto;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    background:#2a7cff;
+    padding:18px;
+    border-radius:15px;
+    transition:background .25s;
+}
+
+.back:hover{
+    background:#4f95ff;
+}
+
+.video-wrap{
+    display:flex;
+    justify-content:center;
+}
+
+.video-wrap video{
+    width:600px;
+    max-width:100%;
+    border-radius:15px;
+}
+
+@media (max-width:768px){
+    .container{ margin:30px auto; }
+    h1{ font-size:32px; }
+    .subtitle{ font-size:18px; margin-bottom:30px; }
+    .card{ padding:20px; }
+    .card h2{ font-size:20px; }
+    .card p{ font-size:17px; }
+}
+
+@media (max-width:480px){
+    .back{ width:90%; padding:14px; font-size:16px; }
+}

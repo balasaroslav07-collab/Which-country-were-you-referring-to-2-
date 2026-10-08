@@ -1,0 +1,144 @@
+/* country-cards.css — спільні стилі для сторінок, що показують
+   сітку країн: africa.html, asia.html, europe.html,
+   north-america.html, south-america.html, oceania.html, world.html.
+   Підключається разом із common.css, тому тут лише те, чого
+   в common.css немає. */
+
+body{
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    right:-15vw;
+    bottom:-15vw;
+    width:min(900px,70vw);
+    height:min(900px,70vw);
+    background:url("https://upload.wikimedia.org/wikipedia/commons/1/14/Earth1_png.png") center no-repeat;
+    background-size:contain;
+    opacity:.18;
+    pointer-events:none;
+    z-index:-1;
+}
+
+header{
+    padding:25px;
+    text-align:center;
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(10px);
+}
+
+h1{
+    font-size:46px;
+}
+
+.container{
+    width:1200px;
+    max-width:95%;
+    margin:50px auto;
+}
+
+/* Заголовок континенту на сторінці "Увесь світ" (continentTemplate) */
+.continent{
+    margin-bottom:60px;
+}
+
+.continent__title{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.country{
+    background:rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:20px;
+    transition:transform .25s, background .25s;
+    cursor:pointer;
+}
+
+.country:hover{
+    transform:translateY(-5px);
+    background:#2a7cff;
+}
+
+.name{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.status{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.ok{
+    color:#5cff72;
+}
+
+.dev{
+    color:#ffd54a;
+}
+
+.no{
+    color:#ff6b6b;
+}
+
+.never{
+    color:#320d0d;
+    background-color:#741004;
+}
+
+.not-independent{
+    color:#bfbfbf;
+}
+
+.wiki-btn{
+    display:none;
+    margin-top:14px;
+    text-decoration:none;
+    color:#fff;
+    background:#1e5fbf;
+    padding:10px 16px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.wiki-btn.show{
+    display:block;
+}
+
+.wiki-btn:hover{
+    background:#3d7ce8;
+}
+
+.back{
+    display:block;
+    width:260px;
+    margin:50px auto;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    background:#2a7cff;
+    padding:18px;
+    border-radius:15px;
+    transition:background .25s;
+}
+
+.back:hover{
+    background:#4f95ff;
+}
+
+@media (max-width:768px){
+    h1{ font-size:34px; }
+    .continent__title{ font-size:26px; }
+}
